@@ -19,4 +19,4 @@ jobs:
           distribution: 'temurin'
       
       - name: Build with Maven
-        run: ./mvnw clean package -DskipTests
+        run: cd devops2026-ufoTracker && ./mvnw clean package -DskipTests
