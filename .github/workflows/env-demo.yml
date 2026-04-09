@@ -1,0 +1,27 @@
+name: Environment Variables Demo
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DEPLOY_ENV: staging
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Display Environment Variable
+        run: |
+          echo "========================================"
+          echo "Environment Configuration"
+          echo "========================================"
+          echo "DEPLOY_ENV: ${{ env.DEPLOY_ENV }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "========================================"
