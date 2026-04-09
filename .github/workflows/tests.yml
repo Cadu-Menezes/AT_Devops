@@ -12,4 +12,3 @@ jobs:
       
       - name: Run Tests
         run: echo "Rodando testes"
-
